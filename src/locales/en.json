@@ -1,0 +1,17 @@
+{
+    "translation": {
+        "header": "Today's weather",
+        "weatherAppTitle": "Weather App",
+        "searchPlaceholder": "Enter a city",
+        "search": "Search",
+        "temperature": "Temperature",
+        "feelsLike": "Feels like",
+        "windSpeed": "Wind",
+        "humidity": "Humidity",
+        "pressure": "Pressure",
+        "sunrise": "Sunrise",
+        "sunset": "Sunset",
+        "showDetailsButton": "Show details",
+        "hideDetailsButton": "Hide details"
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "translation": {
+        "header": "El clima de hoy",
+        "weatherAppTitle": "Aplicación del clima",
+        "searchPlaceholder": "Introduce una ciudad",
+        "search": "Buscar",
+        "temperature": "Temperatura",
+        "feelsLike": "Sensación térmica",
+        "windSpeed": "Viento",
+        "humidity": "Humedad",
+        "pressure": "Presión",
+        "sunrise": "Amanecer",
+        "sunset": "Atardecer",
+        "showDetailsButton": "Mostrar detalles",
+        "hideDetailsButton": "Ocultar detalles"
+    }
+}

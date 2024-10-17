@@ -1,0 +1,17 @@
+{
+    "translation": {
+        "header": "La météo d'aujourd'hui",
+        "weatherAppTitle": "Application météo",
+        "searchPlaceholder": "Entrer une ville",
+        "search": "Rechercher",
+        "temperature": "Température",
+        "feelsLike": "Ressenti",
+        "windSpeed": "Vent",
+        "humidity": "Humidité",
+        "pressure": "Pression",
+        "sunrise": "Lever de soleil",
+        "sunset": "Coucher de soleil",
+        "showDetailsButton": "Afficher les détails",
+        "hideDetailsButton": "Cacher les détails"
+    }
+}

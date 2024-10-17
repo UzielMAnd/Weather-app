@@ -2,6 +2,8 @@ import { useState } from "react"
 import { useFetchClima } from "./hooks/useFetchClima"
 import { FormUI } from "./FormUI"
 import { WeatherCard } from "./WeatherCard"
+import { LanguageSelector } from "./LanguageSelector"
+import { useTranslation } from "react-i18next"
 
 export const WeatherApp = () => {
 
@@ -9,12 +11,18 @@ export const WeatherApp = () => {
   const API_KEY = import.meta.env.VITE_API_KEY
   const difKelvin = 273.15
   const difMetrosSeg = 3.6
-  const idiomas = ['es', 'en']
 
-  const [idiomaActual, setIdiomaActual] = useState(idiomas[0])
+  const { i18n: { changeLanguage, language }, t } = useTranslation()
+  const [idiomaActual, setIdiomaActual] = useState(language)
   const [showDetails, setShowDetails] = useState(false)
   const [ciudad, setCiudad] = useState('')
   const { dataClima, fetchClima } = useFetchClima(urlBase, API_KEY)
+
+  const handleChangeLanguage = (e) => {
+    const newLanguage = e.target.value
+    setIdiomaActual(newLanguage)
+    changeLanguage(newLanguage)
+  }
 
   const handleDetails = () => {
     setShowDetails(!showDetails)
@@ -26,13 +34,12 @@ export const WeatherApp = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    setIdiomaActual(idiomas[0])
     if (ciudad.trim().length > 0) fetchClima(ciudad, idiomaActual)
   }
 
   return (
     <div className="container">
-      <h1>El clima de hoy</h1>
+      <h1>{t('header')}</h1>
 
       <FormUI
         ciudad={ciudad}
@@ -50,6 +57,13 @@ export const WeatherApp = () => {
           />
         )
       }
+
+      <div className="language-button">
+        <LanguageSelector
+          idiomaActual={idiomaActual}
+          handleChangeLanguage={handleChangeLanguage}
+        />
+      </div>
     </div>
   )
 }
