@@ -84,10 +84,29 @@ img {
         width: 40px;
         height: 40px;
     }
+
+    .custom-card {
+        transition: height 0.5s ease;
+        width: 100%;
+        max-width: 18rem;
+    }
+
+    .custom-card-expanded {
+        height: 24rem;
+    }
+
+    .custom-card-collapsed {
+        height: 18rem;
+    }
+
+    .cce-text {
+        margin-top: 5px;
+    }
 }
 
 .custom-card {
     transition: width 0.5s;
+    margin: 0 auto;
 }
 
 .custom-card-expanded {
@@ -98,12 +117,17 @@ img {
     width: 18rem;
 }
 
-.img-icon{
+.img-icon {
     object-fit: contain;
     display: block;
     margin: 0 auto;
 }
 
-.language-button{
+.language-button {
     padding: 20px;
+}
+
+.white-svg{
+    filter: invert(97%) sepia(100%) saturate(13%) hue-rotate(223deg) brightness(104%) contrast(102%);
+    margin-right: 5px;
 }

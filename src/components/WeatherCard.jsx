@@ -17,7 +17,7 @@ export const WeatherCard = ({ dataClima, difKelvin, difMetrosSeg, showDetails, h
                     </div>
                     {showDetails && (
                         <>
-                            <div className="col-md-6">
+                            <div className="col-md-6 cce-text">
                                 <p className="card-text">{t('humidity')}: {dataClima.main.humidity} %</p>
                                 <p className="card-text">{t('pressure')}: {dataClima.main.pressure} hPa</p>
                                 <p className="card-text">{t('sunrise')}: {new Date(dataClima.sys.sunrise * 1000).toLocaleTimeString("es-MX")}</p>

@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useFetchClima } from "./hooks/useFetchClima"
 import { FormUI } from "./FormUI"
 import { WeatherCard } from "./WeatherCard"
@@ -17,6 +17,10 @@ export const WeatherApp = () => {
   const [showDetails, setShowDetails] = useState(false)
   const [ciudad, setCiudad] = useState('')
   const { dataClima, fetchClima } = useFetchClima(urlBase, API_KEY)
+
+  useEffect(() =>{
+    document.title = t('weatherAppTitle')
+  }, [t])
 
   const handleChangeLanguage = (e) => {
     const newLanguage = e.target.value
